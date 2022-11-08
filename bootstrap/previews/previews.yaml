@@ -8,7 +8,7 @@ spec:
       repoURL: https://github.com/davidhole/argo-applicationset-tests
       revision: HEAD
       files:
-      - path: charts/*/branches/*/Chart.yaml
+      - path: charts/*/branches/*/preview.yaml
   template:
     metadata:
       name: '{{path[1]}}-{{path.basename}}'
