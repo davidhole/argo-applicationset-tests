@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cluster-addons
+  namespace: argocd
+spec:
+  generators:
+  - git:
+      repoURL: git@github.com:/davidhole/argo-applicationset-tests
+      revision: HEAD
+      directories:
+      - path: previews/*/*.yaml
+  template:
+    metadata:
+      name: '{{path[0]}}-{{path.basename}}'
+    spec:
+      project: "my-project"
+      source:
+        repoURL: git@github.com:/davidhole/argo-applicationset-tests
+        targetRevision: HEAD
+        path: '{{chart}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{path[0]}}-{{path.basename}}'
