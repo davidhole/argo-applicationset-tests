@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/davidhole/argo-applicationset-tests
       revision: HEAD
       directories:
-      - path: previews/*/*/config.yaml
+      - path: previews/**/config.yaml
   template:
     metadata:
       name: '{{path[0]}}-{{path.basename}}'
