@@ -20,7 +20,8 @@ spec:
         targetRevision: HEAD
         path: '{{chart}}'
         helm:
-          valuesFile: /previews/{{path[1]}}/{{path.basename}}/values.yaml
+          valueFiles:
+            - /previews/{{path[1]}}/{{path.basename}}/values.yaml
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{path[1]}}-{{path.basename}}'
