@@ -18,9 +18,6 @@ spec:
         repoURL: https://github.com/davidhole/argo-applicationset-tests
         targetRevision: HEAD
         path: '{{path}}'
-        helm:
-          valueFiles:
-            - /previews/{{path[1]}}/{{path.basename}}/values.yaml
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{path[1]}}-{{path.basename}}'
