@@ -17,7 +17,7 @@ spec:
       source:
         repoURL: https://github.com/davidhole/argo-applicationset-tests
         targetRevision: HEAD
-        path: '{{chart}}'
+        path: '{{path}}'
         helm:
           valueFiles:
             - /previews/{{path[1]}}/{{path.basename}}/values.yaml
