@@ -8,7 +8,7 @@ spec:
       repoURL: https://github.com/davidhole/argo-applicationset-tests
       revision: HEAD
       files:
-      - path: charts/*/branches/*/preview.yaml
+      - path: charts/*/branches/*/values.preview.yaml
   template:
     metadata:
       name: '{{path[1]}}-{{path.basename}}'
@@ -20,7 +20,7 @@ spec:
         path: '{{path}}'
         helm:
           valueFiles:
-            - preview.yaml
+            - values.preview.yaml
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{path[1]}}-{{path.basename}}'
