@@ -11,16 +11,16 @@ spec:
       - path: charts/*/branches/*/Chart.yaml
   template:
     metadata:
-      name: {{`'{{path[1]}}-{{path.basename}}'`}}
+      name: '{{path[1]}}-{{path.basename}}'
     spec:
       project: "previews"
       source:
         repoURL: https://github.com/davidhole/argo-applicationset-tests
         targetRevision: HEAD
-        path: {{`'{{path}}'`}}
+        path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: {{`'{{path[1]}}-{{path.basename}}'`}}
+        namespace: '{{path[1]}}-{{path.basename}}'
       syncPolicy:
         automated:
           prune: true
