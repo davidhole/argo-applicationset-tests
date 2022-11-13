@@ -1,8 +1,8 @@
 apiVersion: v1
 description: A Helm chart for Kubernetes
-name: sites
+name: prev
 version: 0.1.0
 dependencies:
-- name: chart
+- name: sites
   version: 0.1.0
   repository: file://../chart
