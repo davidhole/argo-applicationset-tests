@@ -1,3 +1,4 @@
+name: preview
 dependencies:
 - name: chart
   repository: file://../chart
