@@ -15,7 +15,7 @@ spec:
     metadata:
       name: '{{path[1]}}-{{path[3]}}'
     spec:
-      project: default
+      project: previews
       source:
         repoURL: https://github.com/davidhole/argo-applicationset-tests
         targetRevision: HEAD
