@@ -4,4 +4,5 @@ name: sites
 version: 0.1.0
 dependencies:
 - name: chart
+  version: 0.1.0
   repository: file://../chart
