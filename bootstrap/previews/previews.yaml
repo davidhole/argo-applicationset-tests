@@ -7,8 +7,10 @@ spec:
   - git:
       repoURL: https://github.com/davidhole/argo-applicationset-tests
       revision: HEAD
-      files:
-      - path: apps/*/branches/*/preview/values.yaml
+      #files:
+      #- path: apps/*/branches/*/preview/values.yaml
+      directories:
+      - path: apps/*/branches/*/preview
   template:
     metadata:
       name: '{{path[1]}}-{{path.basename}}'
