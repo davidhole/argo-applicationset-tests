@@ -1,4 +1,7 @@
-name: preview
+apiVersion: v1
+description: A Helm chart for Kubernetes
+name: sites
+version: 0.1.0
 dependencies:
 - name: chart
   repository: file://../chart
