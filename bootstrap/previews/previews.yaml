@@ -22,7 +22,7 @@ spec:
         path: 'apps/{{path[1]}}/branches/{{path[3]}}/preview'
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{path[1]}}-{{path[3]}}'
+        namespace: '{{path[1]}}-previews'
       syncPolicy:
         automated:
           prune: true
