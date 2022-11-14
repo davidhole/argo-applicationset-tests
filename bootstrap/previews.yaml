@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: previews
 spec:
-  project: "previews"
+  project: default
   source:
     repoURL: https://github.com/davidhole/argo-applicationset-tests
     targetRevision: HEAD
